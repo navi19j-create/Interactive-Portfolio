@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pocket Player · Navidev Studios</title>
+  <link rel="stylesheet" href="../site.css"><script type="module" src="../player.js"></script>
+</head>
+<body>
+<header class="mast"><a class="brand" href="../"><span class="mark" aria-hidden="true"></span>Navidev Studios</a><a href="../#work">← All work</a></header>
+<main class="wrap">
+  <div class="project-heading"><div><p class="category">Hard-surface modeling <span>/</span> Sound</p><h1>Pocket <em>Player.</em></h1></div><p>Drag to orbit. Scroll or pinch to zoom.<br>Press a colored button to use the player.</p></div>
+  <section class="studio" aria-label="Music player">
+    <div id="player-shell" class="viewer-shell">
+      <div class="inspect-bar">
+        <label>Model view <select id="inspect-mode" disabled>
+          <optgroup label="Finishes"><option value="original">Original ivory</option><option value="walnut">Walnut grain</option><option value="graphite">Graphite metal</option></optgroup>
+          <optgroup label="Geometry inspection"><option value="clay">Clay</option><option value="wire">Wireframe</option><option value="normals">Surface normals</option></optgroup>
+        </select></label>
+        <button id="fullscreen" type="button">Fullscreen</button>
+      </div>
+      <div class="viewer-body">
+        <div id="view" class="viewport"><img class="fallback" src="../assets/player.webp" alt="Studio render of Pocket Player"><span id="load" role="status" class="status">Loading 3D view…</span></div>
+        <div id="online-player" hidden><div id="youtube-slot"></div><a id="playlist-link" target="_blank" rel="noopener noreferrer">Open in YouTube Music ↗</a></div>
+      </div>
+      <p id="inspect-summary" class="inspect-summary" role="status"></p>
+    </div>
+    <div class="desk">
+      <label class="source-label">Music source <select id="music-source"><option value="local">Demos &amp; local songs</option><option value="youtube">My playlist · new current</option></select></label>
+      <div><p class="category">On the device</p><h2 id="track">Soft Circuit</h2><p id="artist-credit">Original portfolio loop</p><output id="clock">00:00</output><span id="mode">Stopped</span></div>
+      <div class="pad" aria-label="Playback controls"><button data-action="play">▶ Play</button><button data-action="stop">■ Stop</button><button data-action="menu">Menu</button><button data-action="prev">Previous</button><button data-action="next">Next</button><button data-action="down" aria-label="Volume down">Vol −</button><button data-action="up" aria-label="Volume up">Vol +</button></div>
+      <div class="menu-list" id="menu-list" hidden></div><p id="feedback" class="feedback" aria-live="polite">Volume 60%</p>
+      <div class="view-tools" aria-label="Camera controls"><button data-view="left" aria-label="Rotate left">↶</button><button data-view="right" aria-label="Rotate right">↷</button><button data-view="in" aria-label="Zoom in">+</button><button data-view="out" aria-label="Zoom out">−</button><button data-view="reset">Reset view</button></div>
+    </div>
+  </section>
+  <section class="listening">
+    <div><h2>Send me your<br><em>current playlist.</em></h2></div>
+    <form id="share-playlist"><label for="playlist-url">Your playlist link</label><input id="playlist-url" type="url" placeholder="https://…" required><button class="solid" type="submit">Save draft</button><p class="feedback" id="share-status" role="status"></p></form>
+  </section>
+  <details class="local-song"><summary>Add a song from your device</summary>
+    <form id="add-song"><label>Audio file <input id="song-file" type="file" accept="audio/*" required></label><label>Track title <input id="song-title" placeholder="Defaults to the filename"></label><label>Artist credit <input id="song-artist"></label><button class="solid">Add to player</button></form>
+    <p class="feedback">Local songs are available in this tab for this visit.</p>
+  </details>
+  <details class="local-song"><summary>Playlist credits · new current</summary>
+    <p class="feedback">Curated by Navdeep Singh. Track titles and uploader channels from the public YouTube playlist feed.</p>
+    <ol id="credited-tracks"></ol>
+  </details>
+  <section class="details"><div><p class="category">Material details</p><h2>A closer <em>look.</em></h2><p>Metal hardware, a woven strap, and molded controls seen in the original studio renders.</p></div><figure><img src="../assets/ring.webp" loading="lazy" alt="Close-up of the strap ring and hardware"><figcaption>Strap hardware</figcaption></figure><figure><img src="../assets/weave.webp" loading="lazy" alt="Close-up of the woven strap"><figcaption>Woven cord</figcaption></figure></section>
+</main><footer class="wrap"><a href="../#work">← All work</a><a href="../cardboard-gallery/">Cardboard Gallery →</a></footer></body></html>

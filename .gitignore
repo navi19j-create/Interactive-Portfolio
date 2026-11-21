@@ -1,0 +1,8 @@
+node_modules/
+.openai/
+tools/jeep-review/
+dist/shared/
+dist/player.js
+dist/frame.js
+dist/cardboard.js
+dist/jeep-racing.js

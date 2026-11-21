@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f7f1">
+  <title>Cardboard Gallery · Navidev Studios</title>
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="./tour.css?v=architecture">
+  <script type="module" src="../cardboard.js?v=architecture"></script>
+</head>
+<body>
+<header class="mast"><a class="brand" href="../"><span class="mark" aria-hidden="true"></span>Navidev Studios</a><a href="../#work">← All work</a></header>
+<main class="wrap">
+  <div class="project-heading"><div><p class="category">Environment art <span>/</span> Material study</p><h1>Cardboard <em>Gallery.</em></h1></div><p>Walk a figure eight through six architectural miniatures, from the steps of Patan to the dome of Rome.</p></div>
+  <section id="tour" class="tour viewer-shell" aria-label="Interactive gallery tour">
+    <div class="tour-main">
+      <div class="stage"><div class="plate" id="plate">
+        <img id="scene-image" src="media/architecture-hall.webp" width="2048" height="1152" alt="Cardboard architecture models in the two gallery wings">
+        <div id="markers"></div>
+      </div>
+      <canvas id="art-view" tabindex="0" aria-label="Rotate the building model" hidden></canvas>
+      <div id="walk" hidden>
+        <canvas id="walk-canvas" tabindex="0" aria-label="Walk through the 3D gallery" aria-describedby="caption"></canvas>
+        <p class="walk-status" id="walk-status" role="status">Opening the gallery…</p>
+        <span class="aim" aria-hidden="true" hidden></span>
+        <aside class="model-popup" role="status" hidden><strong></strong><span></span><small>Click or press Enter to inspect</small></aside>
+        <div class="walk-pad" aria-label="Walk controls" hidden>
+          <button type="button" data-step="KeyW" aria-label="Walk forward">↑</button>
+          <button type="button" data-step="KeyA" aria-label="Step left">←</button>
+          <button type="button" data-step="KeyS" aria-label="Walk backward">↓</button>
+          <button type="button" data-step="KeyD" aria-label="Step right">→</button>
+        </div>
+      </div></div>
+      <div id="sun-controls" hidden>
+        <label for="sun-time">Move the sun · Solar time</label>
+        <input type="range" id="sun-time" min="420" max="1020" step="5" value="540">
+        <output for="sun-time" id="solar-time">9:00</output>
+      </div>
+      <div id="miniature-controls" hidden>
+        <label id="miniature-label" for="miniature-range"></label>
+        <input type="range" id="miniature-range" min="0" max="100" step="1">
+        <output for="miniature-range" id="miniature-value"></output>
+      </div>
+      <div class="tour-caption"><div aria-live="polite" aria-atomic="true"><h2 id="view-title">Twin Galleries</h2><p id="caption">Choose Walk in 3D to enter the gallery.</p></div>
+        <div class="tour-actions"><a id="back-room" href="#entrance" hidden>← Room view</a><label id="steer-control" hidden><input id="mouse-steer" type="checkbox"> Mouse steer</label><button type="button" id="capture-mouse" hidden>Enable unlimited mouse look</button><a id="desktop-walk-link" hidden>Walk in Microsoft Edge ↗</a><button type="button" id="tour-fullscreen">Fullscreen</button></div>
+      </div>
+    </div>
+    <nav class="room-nav" aria-label="Room viewpoints">
+      <a href="#walk" class="walk-link"><span>Walk in 3D</span></a>
+      <a href="#rotunda">Gallery overview</a>
+      <p class="category">Building models</p>
+    </nav>
+  </section>
+  <noscript><p>Twin Galleries is shown above. Enable JavaScript to walk through the gallery.</p></noscript>
+  <section class="colophon"><div><p class="category">The collection</p><h2>Built from <em>card.</em></h2><p>Two wings trace different ways to build with steps, columns and domes. Circle each miniature to see its silhouette change, or select it to examine the construction up close.</p></div>
+    <div class="credit-panel"><h3>Architecture studies</h3><p>Original interpretive models by Navidev Studios. The Parthenon is shown with its roof reconstructed. Gallery cardboard texture from <a href="https://ambientcg.com/view?id=Cardboard002">ambientCG</a>.</p>
+    <p>Architectural references include <a href="https://whc.unesco.org/en/list/922/">Rani ki Vav</a>, <a href="https://whc.unesco.org/en/list/524/">Sanchi</a>, the <a href="https://www.turismoroma.it/en/places/pantheon">Pantheon</a> and the <a href="https://www.theacropolismuseum.gr/en/exhibit-halls/parthenon-gallery">Acropolis Museum</a>.</p></div>
+  </section>
+</main>
+<footer class="wrap"><a href="../#work">← All work</a><a href="../frame-study/">Frame Study →</a></footer>
+</body></html>
